@@ -8,6 +8,7 @@ body {
   color: #333333;
   font-weight: normal;
   font-family: 'Noto Sans JP';
+  margin: 0;
 }
 
 a {
@@ -530,6 +531,7 @@ web製作
   height: 29.79vw;
   position: relative;
   border: solid 1px #DDDDDD;
+  border-radius: 12px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 

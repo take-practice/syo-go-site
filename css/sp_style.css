@@ -40,8 +40,8 @@ button {
   /* 最前面に */
   z-index: 10;
   /* ボタンの大きさ  */
-  width: 48px;
-  height: 48px;
+  width: 35px;
+  height: 20px;
 }
 
 /***** 真ん中のバーガー線 *****/
@@ -51,9 +51,9 @@ button {
   position: relative;
   /* 線の長さと高さ */
   width: 100%;
-  height: 4px;
+  height: 3px;
   /* バーガー線の色 */
-  background-color: #d6d5d5;
+  background-color: #333;
   transition: .2s;
 }
 
@@ -64,18 +64,18 @@ button {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #d6d5d5;
+  background-color: #333;
   transition: .5s;
 }
 
 .btn-line::before {
   /* 上の線の位置 */
-  transform: translateY(-16px);
+  transform: translateY(-13px);
 }
 
 .btn-line::after {
   /* 下の線の位置 */
-  transform: translateY(16px);
+  transform: translateY(13px);
 }
 
 /***** メニューオープン時 *****/
@@ -107,13 +107,16 @@ button {
   display: flex;
   flex-direction: column;
   position: fixed;
+  justify-content: normal;
+  align-items: flex-start;
   /* メニューの位置マイナス指定で画面外に */
   right: -70%;
-  width: 30%;
-  height: 50vw;
-  background-color: rgba(167, 148, 58, 0.7);
+  width: 50%;
+  height: 100vh;
+  background-color: #05A5FA;
   color: #928787;
   transition: .3s;
+  padding-top: 100px;
 }
 
 .header__item {
@@ -122,8 +125,9 @@ button {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 100px;
   font-size: 16px;
+  margin-right: 0;
 }
 
 .header__item:hover {
@@ -136,7 +140,10 @@ button {
 /***** メニューオープン時位置0にして画面内に *****/
 .header__list.open {
   position: absolute;
+  margin-top: 0;
+  padding-left: 0;
   right: 0;
+  top: 0;
 }
 
 .header__inner {
@@ -163,19 +170,19 @@ button {
 }
 
 .main img {
-  width: 50vw;
-  height: 50vw;
+  width: 40vw;
+  height: 40vw;
   position: relative;
   top: 40%;
   transform: translateY(-50%);
 }
 
 .main-title {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .main-text {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 /*
@@ -186,17 +193,13 @@ button {
 .module-first__inner {
   margin-left: 10px;
   margin-right: 10px;
-}
-
-.module-first-image {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .module-first img {
   height: 30vw;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .module-first-article-title {
@@ -204,55 +207,58 @@ button {
 }
 
 .module-first-article-text {
-  font-size: 10px;
+  font-size: 12px;
+  margin-right: 0;
 }
 
 .module-quality__inner {
   margin-left: 10px;
   margin-right: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
 }
 
 .module-quality-article-title {
   font-size: 18px;
+  margin-top: 44px;
 }
 
 .module-quality-article-text {
-  font-size: 10px;
+  font-size: 12px;
 }
 
-.module-quality-image {
-  position: relative;
+.module-quality-article {
+  margin-left: 0;
 }
 
 .module-quality img {
   height: 30vw;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+}
+
+.module-response-title {
+  margin-top: 88px;
 }
 
 .module-response__inner {
   margin-left: 10px;
   margin-right: 10px;
-}
-
-.module-response-image {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .module-response img {
   height: 30vw;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .module-response-article-title {
   font-size: 18px;
+  margin-top: 44px;
 }
 
 .module-response-article-text {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 /*
@@ -263,6 +269,42 @@ button {
 .price__inner {
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.horizontal-table-header {
+  font-size: 13px;
+}
+
+.horizontal-table-text {
+  font-size: 13px;
+}
+
+.horizontal-table-header2 {
+  font-size: 13px;
+}
+
+.horizontal-table-text2 {
+  font-size: 13px;
+}
+
+.horizontal-table-header3 {
+  font-size: 13px;
+}
+
+.horizontal-table-text3 {
+  font-size: 13px;
+}
+
+.horizontal-table-header4 {
+  font-size: 13px;
+}
+
+.horizontal-table-text4 {
+  font-size: 13px;
+}
+
+.price-notice {
+  font-size: 14px;
 }
 
 /*
@@ -290,8 +332,24 @@ button {
   padding-right: 10px;
 }
 
+.blog-sub-title {
+  margin-bottom: 40px;
+}
+
+.blog-cards {
+  flex-direction: column;
+}
+
 .blog-card__link {
-  height: 260px;
+  width: 60vw;
+  height: 75vw;
+  margin-bottom: 50px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.blog-card__img {
+  width: 60vw;
 }
 
 .blog-card__text {
@@ -301,7 +359,7 @@ button {
 }
 
 .blog-card__date {
-  font-size: 10px;
+  font-size: 12px;
   right: 15px;
 }
 
@@ -310,10 +368,9 @@ button {
 web製作
 -----------------------------------------------
 ----------------*/
-.swiper-slide {
-  margin-right: 10px !important;
-  width: 30% !important;
-  height: 30% !important;
+.swiper-card__img {
+  width: 100%;
+  height: 30vw;
 }
 
 .swiper-card__text {
@@ -338,6 +395,27 @@ web製作
 .form-wrapper {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+#form {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.box-name label {
+  margin-right: 20px;
+}
+
+.box-name input {
+  width: 100%;
+}
+
+.box-mail label {
+  margin-right: 20px;
+}
+
+.box-mail input {
+  width: 100%;
 }
 
 /*
