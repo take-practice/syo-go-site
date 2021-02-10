@@ -259,6 +259,7 @@ button {
 
 .module-response-article-text {
   font-size: 12px;
+  margin-bottom: 0;
 }
 
 /*
@@ -327,6 +328,10 @@ button {
 ブログ
 -----------------------------------------------
 -----------------*/
+.blog {
+  padding-bottom: 41px;
+}
+
 .blog__inner {
   padding-left: 10px;
   padding-right: 10px;

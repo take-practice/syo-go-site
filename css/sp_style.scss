@@ -252,6 +252,7 @@ button {
 	}
 	&-article-text {
 		font-size: 12px;
+		margin-bottom: 0;
 	}
 }
 
@@ -321,6 +322,7 @@ button {
 -----------------------------------------------
 -----------------*/
 .blog {
+	padding-bottom: 41px;
 	&__inner {
 		padding-left: 10px;
 		padding-right: 10px;
